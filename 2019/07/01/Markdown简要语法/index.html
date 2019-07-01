@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Hello Beantech - undefined
+          Markdown简要语法 - undefined
         
     </title>
 
-    <link rel="canonical" href="https://gmiao.github.io/2019/06/29/hello-Beantech/">
+    <link rel="canonical" href="https://gmiao.github.io/2019/07/01/Markdown简要语法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -86,18 +86,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                              <a class="tag" href="/tags/#Markdown" title="Markdown">Markdown</a>
                             
-                              <a class="tag" href="/tags/#Beantech" title="Beantech">Beantech</a>
-                            
-                              <a class="tag" href="/tags/#git" title="git">git</a>
+                              <a class="tag" href="/tags/#基本语法" title="基本语法">基本语法</a>
                             
                         </div>
-                        <h1>Hello Beantech</h1>
-                        <h2 class="subheading">个人博客初搭建</h2>
+                        <h1>Markdown简要语法</h1>
+                        <h2 class="subheading">MD文件的一些简单的基本语言说明</h2>
                         <span class="meta">
                             Posted by G Miao on
-                            2019-06-29
+                            2019-07-01
                         </span>
                     </div>
                 
@@ -214,40 +212,72 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>该个人博客使用GitHub+<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>搭建，点击<a href="https://hexo.io/docs/" target="_blank" rel="noopener">文档</a>了解更多关于hexo的使用信息，主题选用为<a href="https://github.com/YenYuHsuan/hexo-theme-beantech/" target="_blank" rel="noopener">Beantech</a></p>
-<a id="more"></a>
-<h2 id="配置环境需求"><a href="#配置环境需求" class="headerlink" title="配置环境需求"></a>配置环境需求</h2><p>Node.js<br>Git<br>Hexo<br>上述需求均可在各自官网下载安装</p>
-<h2 id="Github相关设置"><a href="#Github相关设置" class="headerlink" title="Github相关设置"></a>Github相关设置</h2><p>Node.js和Git都安装完成后，我们需要申请一个GitHub账号，以供之后blog的部署<br>账号申请完成后，点击头像左边的 “+” 符号，创建一个新的 “仓库”<br><img src="/2019/06/29/hello-Beantech/CreateRepository1.jpg" alt="CreateRepository1"><br>填入 “仓库” 名称，需为”<code>username.github.io</code>“，若为其他名称，个人主页或许会失效，图中因为博主已创建过个人主题，所以重名报错，没有影响<br><img src="/2019/06/29/hello-Beantech/CreateRepository2.jpg" alt="CreateRepository2"><br>仓库创建完成后需要配置SSH KEY，用以本地向GitHub服务器进行文件传输<br>使用下述命令配置Git的用户信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;GitHub邮箱&quot;</span><br></pre></td></tr></table></figure>
+                <h1 id="Markdown-常用语法"><a href="#Markdown-常用语法" class="headerlink" title="Markdown 常用语法"></a>Markdown 常用语法</h1><h2 id="字体相关"><a href="#字体相关" class="headerlink" title="字体相关"></a>字体相关</h2><p>*Hello World*&nbsp;&nbsp;<em>hello World</em>&nbsp;&nbsp;倾斜<br>**hello World**&nbsp;&nbsp;<strong>hello World</strong>&nbsp;&nbsp;加粗<br>***hello World***&nbsp;&nbsp;<strong><em>hello World</em></strong>&nbsp;&nbsp;倾斜加粗<br>~~hello World~~&nbsp;&nbsp; <del>hello World</del>&nbsp;&nbsp;中间划线  </p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>![图片描述](图片路径)&nbsp;&nbsp;用以在文章中插入图片</p>
+<p>网络超链接可以只是使用URL,也可以试用下列格式<br>[超连接描述](URL)&nbsp;&nbsp;如: <a href="www.github.com">github</a></p>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个或三个以上的-或*在产生分割线的效果<br> ___<br> ____ &nbsp;下划线  </p>
+<p> ***<br> ****<br>他们效果都一样，如下：</p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表使用- + *任意一种，但需注意，符号后需添加一个空格才会生效  </p>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+<li>无序列表3  <h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3>有序列表为数字加点，同样符号后需要空格<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表1  </span><br><span class="line">2. 有序列表2  </span><br><span class="line">3. 有序列表3</span><br></pre></td></tr></table></figure>
 
-<p>生成SSH秘钥文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;Github邮箱”</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>效果如下</p>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头 | 表头 | 表头   </span><br><span class="line">\:\-\| \:\-\: \| \-\:  </span><br><span class="line">数据 | 数据 | 数据  </span><br><span class="line">数据 | 数据 | 数据</span><br></pre></td></tr></table></figure>
 
-<p>秘钥文件的默认生成位置为C:\user\yourname\.ssh文件夹下<br><img src="/2019/06/29/hello-Beantech/CreateSSH.jpg" alt="CreateSSH"><br>生成两个文件，“.pub”为公钥，需要将里面的内容复制放入GitHub账号“设置”中，另一个文件为私钥文件，需要妥善保存，不要泄露<br>注：若需要在不同的电脑上进行管理，需要在各个电脑上生成SSH KEY，并将它们添加到GitHub账号中<br><img src="/2019/06/29/hello-Beantech/SSHKey.jpg" alt="SSHKey"></p>
-<h2 id="Hexo相关设置"><a href="#Hexo相关设置" class="headerlink" title="Hexo相关设置"></a>Hexo相关设置</h2><ol>
-<li>运行npm install -g hexo安装hexo本地环境</li>
-<li>创建保存本地博客的工作文件夹MyBlog</li>
-<li>初始化hexo博客工程：hexo init</li>
-<li>编译博客系统：hexo g</li>
-<li>启动本地服务器进行预览：hexo s  </li>
+</li>
 </ol>
-<p>如果hexo正常工作了，输入 “<a href="http://localhost:4000/”" target="_blank" rel="noopener">http://localhost:4000/”</a>  就能看到博客的初始模样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>: 的位置在-左边表示左对齐，在右边表示右对齐, - 两边都存在 : 表示居中对齐，具体效果如下：   </p>
+<table>
+<thead>
+<tr>
+<th align="left">表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">数据</td>
+<td align="center">数据</td>
+<td align="right">数据</td>
+</tr>
+<tr>
+<td align="left">数据</td>
+<td align="center">数据</td>
+<td align="right">数据</td>
+</tr>
+</tbody></table>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>插入代码块有两种方式，一是利用缩进；二是利用” ` “反引号（即一般ESC键位下边那个符号）包裹代码<br>```<br>#include<iostream><br>using namespace std;<br>void main()<br>{<br>    cout&lt;&lt;“hello World”;<br>}<br>```<br>代码块效果如下</iostream></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;  </span><br><span class="line">void main()  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;&quot;hello World&quot;;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>我们在GitHub上部署，还需要安装插件<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="Todo列表"><a href="#Todo列表" class="headerlink" title="Todo列表"></a>Todo列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 未处理事情1 </span><br><span class="line">- [x] 已处理的事情1</span><br><span class="line">- [ ] 未处理的事情2  </span><br><span class="line">- [x] 已处理的事情2</span><br></pre></td></tr></table></figure>
 
-<p>更多信息请点击<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档</a>进行了解</p>
-<h3 id="发布新的文章"><a href="#发布新的文章" class="headerlink" title="发布新的文章"></a>发布新的文章</h3><p>在选定自己喜欢的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>后，使用“hexo new yourpapertitle”进行新的文章创建，在“source/_posts”文件夹下回生成“yourpapertitle.md”文件，这就是你的文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>[]左右及中间均需空格，X代表勾选，未填表示未勾选，具体显示效果如下：</p>
+<ul>
+<li><input disabled type="checkbox"> 未处理事情1 </li>
+<li><input checked disabled type="checkbox"> 已处理的事情1</li>
+<li><input disabled type="checkbox"> 未处理的事情2  </li>
+<li><input checked disabled type="checkbox"> 已处理的事情2 </li>
+</ul>
+<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p>```flow<br>st=&gt;start: Start<br>op1=&gt;operation: My Operation<br>c=&gt;condition: Yes or No?<br>e=&gt;end: End</p>
+<p>st-&gt;op1-&gt;c<br>c(yes)-&gt;e<br>c(no)-&gt;op1<br>```<br>效果如下（若看到的是代码块而非流程图，表明并不支持显示或缺损插件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start  </span><br><span class="line">op1=&gt;operation: My Operation  </span><br><span class="line">c=&gt;condition: Yes or No?  </span><br><span class="line">e=&gt;end: End</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;c  </span><br><span class="line">c(yes)-&gt;e  </span><br><span class="line">c(no)-&gt;op1</span><br></pre></td></tr></table></figure>
 
-<h3 id="部署文章"><a href="#部署文章" class="headerlink" title="部署文章"></a>部署文章</h3><p>要想将写好的文章挂在GitHub服务器上，需要我们对GitHub进行关联，这就是之前获取的SSH KEY的作用<br>此外，我们还需要在blog根目录下的配置文件中“_config.yml”进行数据的补充（注：根目录下的_config.yml,不是themes文件夹下的_config.yml）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">url: yourURL</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>在“：”后需要加一个空格，否则配置无效<br>文章编辑号后，即可生成、部署文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate 或者 hexo g</span><br><span class="line">hexo deploy   或者 hexo d</span><br></pre></td></tr></table></figure>
-
-<p>这样一篇blog就完成了，可喜可贺可喜可贺！！</p>
+<h2 id="常用注意"><a href="#常用注意" class="headerlink" title="常用注意"></a>常用注意</h2><ol>
+<li>连续两个以上的空格+回车进行换行操作；  </li>
+<li>Markdown只能自动识别一个半角空格，多余的空格需要使用&amp;nbsp;或者&amp;#160;来完成</li>
+<li>许多语法上的特殊符号，如”* _ # + -“等，在前面加反斜线\进行转义即可显示符号本身</li>
+<li>Markdown本身不支持修改字体、字号、颜色等功能，但可以使用HTML的方法进行实现</li>
+<li>锚点功能并不是都支持，谨慎使用</li>
+<li>latex、流程图、TODO列表等高级功能不是所有都能显示成功的，有些需要安装各自插件，这里不统一介绍，需要的请自行搜索资料</li>
+</ol>
 
                 
 
@@ -255,10 +285,10 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2019/07/01/Markdown简要语法/" data-toggle="tooltip" data-placement="top" title="Markdown简要语法">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2019/06/29/hello-Beantech/" data-toggle="tooltip" data-placement="top" title="Hello Beantech">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -283,7 +313,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置环境需求"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">配置环境需求</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Github相关设置"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Github相关设置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Hexo相关设置"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Hexo相关设置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#发布新的文章"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">发布新的文章</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#部署文章"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">部署文章</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Markdown-常用语法"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Markdown 常用语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字体相关"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">字体相关</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">链接</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分割线"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">分割线</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#列表"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">列表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#无序列表"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">无序列表</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#有序列表"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">有序列表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">表格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#代码块"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">代码块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Todo列表"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">Todo列表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#流程图"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">流程图</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用注意"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">常用注意</span></a></li></ol></li></ol>
         
         </div>
       </aside>
